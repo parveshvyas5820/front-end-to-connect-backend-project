@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    .par{
+        background-color: rgb(133, 230, 239);
+        width: 800px;
+        height: 600px;
+        border: 4px solid red;
+
+      
+    }
+    .par1{
+        color: red;
+        background-color: blanchedalmond;
+         font-size: medium;
+        font-size: small;
+     
+    }
+    .abc{
+        border: 5px solid maroon;
+
+        
+    }
+    
+    
+</style>
+<body>
+    
+    <center>
+<div class="par">
+    <marquee style="border: 2px solid rgb(255, 235, 11);background-color: RED;color: rgb(240, 236, 9);font-size: 50px;"> REGISTRATION FORM</marquee>
+    <form action="/register" method="post"id="form">
+       <b> NAME:</b>
+        <input   class="par1" type="text" name="name"onkeyup="name1()"><span id="name2"></span><br><br><br>
+        
+        <b>AGE:</b>
+        <input  class="par1"  type="number" name="age"onkeyup="age1()"><span id="age2"></span><br><br><br>
+        <b> EMAIL:</b>
+        <input  class="par1"  type="text" name="email"onkeyup="email1()"><span id="email2"></span><br><br><br>
+            <b> CONTACT:</b>
+            <input  class="par1"  type="number" name="contact"onkeyup="contact1()"><span id="contact2"></span><br><br><br>
+             <b> PASSWORD:</b>
+            <input  class="par1"  type="password" name="password"onkeyup="return password1()"><i id="show1" class="fa-sharp fa-regular fa-eye-slash"onclick="show()"></i><span id="password2"></span></i><br><BR>
+            <h1 id="msg">{{message}}</h1>
+        <button class="abc" style="background-color: rgb(237, 237, 191);color: maroon;width: 200px;font-size: large;" type="submit">REGISTER</button>
+    </form>
+    </div>
+
+<script>
+    let msg=document.getElementById("msg");
+    if(msg.innerHTML=="data is register"){
+
+setInterval(()=>{
+window.location.href="/login";
+},2000)
+    }
+
+
+
+
+    let form=document.getElementById("form")
+
+
+    let name1=()=>{
+        if(form[0].value.length>=3&&form[0].value.length<=25){
+document.getElementById("name2").innerHTML="✔"
+        }else{
+            document.getElementById("name2").innerHTML="❌"
+        }
+    }
+
+
+     let age1=()=>{
+        if(form[1].value>=18&&form[1].value<=45){
+document.getElementById("age2").innerHTML="✔"
+        }else{
+            document.getElementById("age2").innerHTML="❌"
+        }
+    }
+
+     let email1=()=>{
+        var mailformat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+        if(form[2].value.match(mailformat)){
+document.getElementById("email2").innerHTML="✔"
+        }else{
+            document.getElementById("email2").innerHTML="❌"
+        }
+    }
+ let contact1=()=>{
+        if(form[3].value.length==10){
+document.getElementById("contact2").innerHTML="✔"
+        }else{
+            document.getElementById("contact2").innerHTML="❌"
+        }
+    }
+
+
+
+     let show=()=>{
+        if(form[4].type=="password"){
+            form[4].type="number";
+
+
+            
+document.getElementById("show1").className="fa-regular fa-eye"
+       
+       
+       return false
+        }else{
+
+            
+            document.getElementById("show1").className="fa-solid fa-eye-slash"
+       return false
+        }
+    }
+
+
+    
+
+</script>
+</body>
+
+</html>

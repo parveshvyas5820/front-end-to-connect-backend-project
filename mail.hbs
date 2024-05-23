@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .ab {
+        background-color: rgb(5, 248, 248);
+        width: 500px;
+        height:730px;
+        border: 2px solid darkorange;
+    }
+    .a{
+        background-color: yellow;
+        border: solid 2px red;
+    }
+</style>
+
+<body>
+    <center>
+        <div class="ab">
+           
+            <form action="/mail" method="post" enctype="multipart/form-data">
+                <h1 style="background-color: yellow;color:rgb(254, 15, 6)">COMPOSE EMAIL</h1>
+                <H1 style="color:red">TO</H1>
+                <input   class="a" type="text" name="to">
+                <br><br>
+                <H1 style="color:#ff00a6">SUBJECT</H1>
+
+                <input class="a" type="text" name="subject">
+                <br><br>
+                <H1 style="color:rgb(17, 20, 243)">ENTER TEXT</H1>
+                <textarea class="a" name="message"></textarea>
+                <br>
+                <br>
+                <input type="file"name="image">
+                </textarea>
+                <BR>
+                <BR>
+               
+                <button class="a" type="submit">SEND MAIL</button>
+
+
+            </form>
+            <br>
+            <br>
+            <img src={{URL}} alt="par">
+        </div>
+      
+        
+</body>
+
+</html>

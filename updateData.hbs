@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .ist{
+      text-align: center;
+      background-color: grey;
+      width: 500px;
+      height: 500px;
+      padding-top: 50px;
+    }
+</style>
+<body>
+    <center>
+    <div class="ist">
+        <h1>UPDATION</h1>
+    <form action="/update" method="post">
+    <H6>ID</H6>
+    <input type="text" name="id" value={{data._id}}>
+    <br>
+   
+    <H6>NAME</H6>
+     <input type="text" name="name" value={{data.name}}>
+     <br>
+    
+      <H6>AGE</H6>
+      <input type="number" name="age" value={{data.age}}>
+      <br>
+    
+       <H6>MOBILE</H6>
+       <input type="number" name="contact" value={{data.contact}}>
+       
+       <br>
+       <br>
+       <button type="submit">update</button>
+</div>
+    </form>
+    
+</body>
+</html>

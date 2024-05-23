@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<center>
+
+<a href="data1"><button class="btn" style="background-color: rgb(149, 1, 207);"onclick="abc()">show</button></a>
+<a href="register"><button style="background-color: rgb(24, 236, 4);">register</button></a>
+
+
+<br>
+<br>
+
+<table border="10%"bordercolor="green">
+    <tr>
+
+     
+    <th>name</th>
+    <th>age</th>
+    <th>email</th>
+    <th>contact</th>
+    <th>password</th>
+    <th>method</th>
+      <th>method</th> 
+</tr>
+{{#each data}}
+<tr>
+   
+    <td>{{name}}</td>
+      <td>{{age}}</td>
+        <td>{{email}}</td>
+          <td>{{contact}}</td>
+            <td>{{password}}</td>
+            <td> <a href="/deleteData/{{_id}}"><button>delete</button></a></td>
+            <td> <a href="/update/{{_id}}"><button>update</button></a></td>
+</tr>
+   
+{{/each}}
+</table>
+<script>
+  function abc(){
+    alert("do you  want show")
+  }
+</script>
+</body>
+</html>
